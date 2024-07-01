@@ -26,3 +26,4 @@ jobs:
         uses: docker://ghcr.io/codfish/semantic-release-action@sha256:aeed7c9a41e4f4f8eb0887e14b38d85d2a5a3ad103603db809da36d1f94bfb3b # v3.4.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
