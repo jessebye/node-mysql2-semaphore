@@ -1,0 +1,28 @@
+on:
+  push:
+    branches:
+      - "**"
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4.1.6
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4.0.2
+        with:
+          node-version: 20.x
+          cache: npm
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+      - name: Run tests
+        run: npm run test
+      - name: Semantic release
+        uses: docker://ghcr.io/codfish/semantic-release-action@sha256:aeed7c9a41e4f4f8eb0887e14b38d85d2a5a3ad103603db809da36d1f94bfb3b # v3.4.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

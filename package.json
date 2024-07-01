@@ -1,7 +1,7 @@
 {
-  "name": "mysql-semaphore",
-  "version": "0.1.1",
-  "description": "Semaphore for clustered node instances using MySQL",
+  "name": "mysql2-semaphore",
+  "version": "0.1.0",
+  "description": "mysql2 fork of mysql-semaphore for clustered node instances using MySQL",
   "main": "index.js",
   "directories": {
     "example": "example",
@@ -12,21 +12,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/n8j1s/node-mysql-semaphore.git"
+    "url": "git+https://github.com/jessebye/node-mysql2-semaphore.git"
   },
   "keywords": [
     "Semaphore",
     "MySQL",
     "clustered"
   ],
-  "author": "Nathaniel Jones (n8j1s)",
+  "author": "Jesse Bye (jessebye)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/n8j1s/node-mysql-semaphore/issues"
+    "url": "https://github.com/jessebye/node-mysql2-semaphore/issues"
   },
-  "homepage": "https://github.com/n8j1s/node-mysql-semaphore#readme",
+  "homepage": "https://github.com/jessebye/node-mysql2-semaphore#readme",
   "dependencies": {
-    "mysql": "^2.9.0"
+    "mysql2": "^3.10.2"
   },
   "devDependencies": {
     "mocha": "^2.2.5"
