@@ -10,6 +10,14 @@ jobs:
       contents: write
       issues: write
       pull-requests: write
+    services:
+      mysql:
+        image: bitnami/mysql:8.4
+        env:
+          MYSQL_ROOT_PASSWORD: test
+        ports:
+          - 3306:3306
+        options: --health-cmd="/opt/bitnami/scripts/mysql/healthcheck.sh" --health-interval=15s --health-timeout=5s --health-retries=6
     steps:
       - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4.1.6
         with:
