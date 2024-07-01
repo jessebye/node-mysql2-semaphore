@@ -1,4 +1,4 @@
-A semaphore handler for Node.js and MySQL. Allows you to generate a semaphore in a clustered Node.js environment using MySQL. This is useful for such things as cron jobs or long running tasks that you only want to occur on a single instance. 
+A mysql2 fork of the [mysql-semaphore](https://www.npmjs.com/package/mysql-semaphore) library for Node.js and MySQL. Allows you to generate a semaphore in a clustered Node.js environment using MySQL. This is useful for such things as cron jobs or long running tasks that you only want to occur on a single instance. 
 
 Requirements:
 MySQL server
@@ -6,12 +6,12 @@ MySQL server
 ### Installation
 
 ```sh
-npm install mysql-semaphore --save
+npm install mysql2-semaphore --save
 ```
 
 ### Initialization:
 
-Refer to node-mysql (https://github.com/felixge/node-mysql/) for MySql configuration settings.
+Refer to mysql2 (https://github.com/sidorares/node-mysql2) for MySql configuration settings.
 
 ```sh
 var Semaphore = require('mysql-semaphore');
