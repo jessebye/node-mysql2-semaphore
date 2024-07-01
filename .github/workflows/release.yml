@@ -14,6 +14,8 @@ jobs:
       mysql:
         image: bitnami/mysql:8.4
         env:
+          MYSQL_USER: someuser
+          MYSQL_PASSWORD: somepw
           MYSQL_ROOT_PASSWORD: test
         ports:
           - 3306:3306
